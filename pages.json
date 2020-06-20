@@ -15,7 +15,7 @@
 					},
 					"buttons": [{
 							"color": "#989898",
-							"colorPressed": "#FD6801",
+							"colorPressed": "#ff6700",
 							"float": "left",
 							"fontSize": "22px",
 							"fontSrc": "/static/font/iconfont.ttf",
@@ -23,7 +23,7 @@
 						},
 						{
 							"color": "#989898",
-							"colorPressed": "#FD6801",
+							"colorPressed": "#ff6700",
 							"float": "right",
 							"fontSize": "22px",
 							"fontSrc": "/static/font/iconfont.ttf",
@@ -42,7 +42,7 @@
 	},
 	"tabBar": {
 		"color": "#B5B5B5",
-		"selectedColor": "#FD6801",
+		"selectedColor": "#ff6700",
 		"borderStyle": "black",
 		"backgroundColor": "#FFFFFF",
 		"list": [{

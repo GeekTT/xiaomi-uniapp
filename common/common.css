@@ -15,15 +15,23 @@ image{  width: 100%;  }
 /* #endif */
 /* 主色调 */
 /* 主背景颜色（橙色）*/
-.main-bg-color{ background-color: #FD6801; }
+.main-bg-color{ background-color: #ff6700; }
 /* 主点击背景颜色（淡橙色）*/
 .main-bg-hover-color{ background-color: rgba(253,104,1,0.85); }
 /* 主字体颜色（橙色）*/
-.main-text-color{color: #FD6801;}
+.main-text-color{color: #ea625b;}
+.main-tab-text-color{color: #ff6700;}
+.main-btn-bg-color{
+	color: #fff;
+	background: #ea625b;}
 /* 主边框颜色 */
 .main-border-color{ border-color: #F1F1F1; }
 
 .input-border-color{
-	border-color: #FD6801;
+	border-color: #ff6700;
+}
+/* 选中下边框样式 */
+.border-bottom-active-color{
+	border-bottom: 3px #FF6700 solid;
 }
 
