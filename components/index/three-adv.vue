@@ -17,7 +17,7 @@
 <script>
 	export default {
 		props:{
-			resdata:Object
+			resdata:Array
 		},
 		methods:{
 			event(obj){
