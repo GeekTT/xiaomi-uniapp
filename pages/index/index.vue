@@ -1,22 +1,22 @@
 <template>
 	<view>
-		<!-- 顶部搜索框 -->
-		<navigator url="../search/search">
-			<view class=" d-flex a-center j-around px-2 pt-1 pb-0">
-				<image class="logo-mi" src="../../static/images/mi.png" mode=""></image>
-				<search-top  class="flex-1 mx-2" :placeholder="placeholder"  :disabled="true"></search-top>
-				<i class="iconfont icon-iconfuzhi text-light-muted font-my"></i>
-			</view>
-		</navigator>
-		
-		
-		<!-- 顶部选项卡 -->
-		<scroll-view scroll-x="true" class="scroll-row border-bottom" style="height: 80rpx;" :scroll-into-view="scrollinto"
-		 scroll-with-animation="true">
-			<view class="scroll-item scroll-row-item px-3" v-for="(item,i) in tabBars" :key="i" @click="changeTab(i)" :id="'tab' + i">
-				<text :class="tabIndex === i ? 'main-tab-text-color border-bottom-active-color': ' ' ">{{item.name}}</text>
-			</view>
-		</scroll-view>
+		<view class="w-100 ">
+			<!-- 顶部搜索框 -->
+			<navigator url="../search/search">
+				<view class=" d-flex a-center j-around px-2 pt-1 pb-0">
+					<image class="logo-mi" src="../../static/images/mi.png" mode=""></image>
+					<search-top  class="flex-1 mx-2" :placeholder="placeholder"  :disabled="true"></search-top>
+					<i class="iconfont icon-iconfuzhi text-light-muted font-my"></i>
+				</view>
+			</navigator>
+			<!-- 顶部选项卡 -->
+			<scroll-view scroll-x="true" class="scroll-row border-bottom" style="height: 80rpx;" :scroll-into-view="scrollinto"
+			 scroll-with-animation="true">
+				<view class="scroll-item scroll-row-item px-3" v-for="(item,i) in tabBars" :key="i" @click="changeTab(i)" :id="'tab' + i">
+					<text :class="tabIndex === i ? 'main-tab-text-color border-bottom-active-color': ' ' ">{{item.name}}</text>
+				</view>
+			</scroll-view>
+		</view>
 		<swiper class="mb-5 pb-3" :current="tabIndex" :style="'height: '+ scrollH +'px;'" @change="onChangeTab">
 			<swiper-item v-for="(item,i) in newsitems" :key="i">
 				<scroll-view class="mb-5" scroll-y="true" :style="'height: '+ scrollH +'px;'"
@@ -56,8 +56,6 @@
 			</swiper-item>
 
 		</swiper>
-
-
 	</view>
 </template>
 

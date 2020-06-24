@@ -1,5 +1,5 @@
 <template>
-	<view class="container position-fixed left-0 right-0">
+	<view class="container">
 	  <i class="iconfont  find" :class="{'icon-tubiao-':searchIconShow}"></i>
 	  <input class="bar" :class="{ 'bar-pl60':paddingLeft,'bar-pl30':!paddingLeft}" @confirm="$emit('onSearch')" :placeholder="placeholder"></input>
 	</view>
