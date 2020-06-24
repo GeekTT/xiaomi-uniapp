@@ -1,11 +1,11 @@
 <template>
 	<view class="card">
-		<view v-if="showhead" class="p-2 border-bottom main-border-color">
+		<view v-if="showhead" class="p-2  main-border-color" :class="{'border-bottom':headBorderBottom}">
 			<slot name="title">
-				<text v-if="headTitle" class="font-md font-weight">{{headTitle}}</text>
+				<text v-if="headTitle" class="font-md " :class="'headTitleWeight'? 'font-weight':''">{{headTitle}}</text>
 			</slot>
 		</view>
-		<view class="">
+		<view :class="{'p-2':bodyPadding}">
 			<image v-if="bodyCover" :src="bodyCover" mode="widthFix"></image>
 			<slot></slot>
 		</view>

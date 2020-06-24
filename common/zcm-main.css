@@ -147,6 +147,7 @@ body{
 .j-center{ justify-content: center!important; }
 .j-end{ justify-content: flex-end; }
 .j-sb{ justify-content: space-between; }
+.j-around{justify-content: space-around;}
 .a-center{ align-items:center!important; }
 .a-start{ align-items: flex-start; }
 .a-end{ align-items:flex-end; }

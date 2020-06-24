@@ -1,0 +1,1 @@
+<view class="container"><view class="iconfont icon-tubiao- find _i"></view><input class="bar" placeholder="{{placeholder}}"/></view>

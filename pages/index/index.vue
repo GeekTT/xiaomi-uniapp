@@ -1,5 +1,15 @@
 <template>
 	<view>
+		<!-- 顶部搜索框 -->
+		<navigator url="../search/search">
+			<view class=" d-flex a-center j-around px-2 pt-1 pb-0">
+				<image class="logo-mi" src="../../static/images/mi.png" mode=""></image>
+				<search-top  class="flex-1 mx-2" :placeholder="placeholder"  :disabled="true"></search-top>
+				<i class="iconfont icon-iconfuzhi text-light-muted font-my"></i>
+			</view>
+		</navigator>
+		
+		
 		<!-- 顶部选项卡 -->
 		<scroll-view scroll-x="true" class="scroll-row border-bottom" style="height: 80rpx;" :scroll-into-view="scrollinto"
 		 scroll-with-animation="true">
@@ -276,6 +286,7 @@ let demo2 = [
 		},
 
 	]
+	import searchTop from '../../components/common/search.vue'
 	import swiperImage from '../../components/index/swiper-image.vue'
 
 	import indexNav from '../../components/index/index-nav.vue'
@@ -288,11 +299,14 @@ let demo2 = [
 			indexNav,
 			threeAdv,
 			card,
-			commonList
+			commonList,
+			searchTop
 
 		},
 		data() {
 			return {
+				
+				placeholder:'小米10pro',
 				scrollinto: '',
 				scrollH: 700, // 默认屏幕高度
 				tabIndex: 0,
@@ -312,6 +326,12 @@ let demo2 = [
 			this.__init()
 		},
 		methods: {
+			// 点击搜索框跳转至搜索页
+			onFocus(){
+				uni.navigateTo({
+					url:'../search/search'
+				})
+				},
 			// 初始化事件
 			__init() {
 				// 获取顶部选项卡
@@ -374,7 +394,12 @@ let demo2 = [
 				
 				
 				
-			}
+			},
+			
+			
+		},
+		created() {
+		
 		}
 	}
 </script>
@@ -383,5 +408,12 @@ let demo2 = [
 	.scroll-item {
 		height: 80rpx;
 		line-height: 80rpx;
+	}
+	.logo-mi{
+		width: 45rpx;
+		height: 30rpx;
+	}
+	.font-my{
+		font-size: 48rpx;
 	}
 </style>
