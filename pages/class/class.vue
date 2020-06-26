@@ -1,23 +1,31 @@
 <template>
-	<view>
+	<view class="d-flex" style="height: 100%;">
 		<!-- 顶部 -->
-		<view class="w-95 position-fixed top-0 z-9 d-flex a-center j-around bg-light-1 px-2 pt-1 pb-0">
+		<!-- <view class="w-95 position-fixed top-0 z-9 d-flex a-center j-around bg-light-1 px-2 pt-1 pb-0">
 			<i class="iconfont icon-fanhui4 i-font-size"></i>
-			<view class="flex-1 text-light-muted text-center">分类</view>
+			<view class="flex-1 font-md-1 text-light-muted text-center">分类</view>
 			<i class="iconfont icon-sousuo1 text-light-muted i-font-size m-0 " @click="goSearch"></i>
-		</view>
-		<view class="d-flex my-7 w-100 ">
-			<scroll-view class="flex-1 scroll-y border-right">
-				<view class="border-light-secondary py-1 left-scroll-item" v-for="(item,index) in cate" :key="index" @click="changeCate(index)">
-					<view class=" py-1 font-md text-muted text-center class-no-active" :class="activeIndex === index ? 'class-active':'' ">{{item.name}}</view>
+		</view> -->
+		
+		<loading :show="showLoading"></loading>
+		
+		<scroll-view id="leftScroll" class="flex-1 py-3 border-right" scroll-y style="height: 100%;" :scroll-top="leftScrollTop"
+		 >
+			<view class="border-light-secondary py-1 left-scroll-item" hover-class="bg-ligth-secondary" v-for="(item,index) in cate"
+			 :key="index" @tap="changeCate(index)">
+				<view class=" py-1 font-md text-muted text-center class-no-active" :class="activeIndex === index ? 'class-active':'' ">{{item.name}}</view>
+			</view>
+		</scroll-view>
+		<scroll-view scroll-y class="flex-3 py-3" style="height: 100%;" :scroll-top="rightScrollTop" :scroll-with-animation="true"
+		 @scroll="onRightScroll">
+			<view class="row right-scroll-item" v-for="(item,index) in list" :key="index">
+				<view class="w-100 text-center text-muted font-md">{{item.name}}</view>
+				<view class="span24-8 text-center py-2" v-for="(item2 ,index2) in item.list" :key="index2">
+					<image :src="item2.src" mode="" style="width: 120upx;height: 120upx;"></image>
+					<text class="d-block text-light-muted font">{{item2.name}}</text>
 				</view>
-			</scroll-view>
-			<scroll-view class="flex-3 scroll-y">
-				<view v-for="(item, index) in 50" :key="index">
-					{{item}}
-				</view>
-			</scroll-view>
-		</view>
+			</view>
+		</scroll-view>
 	</view>
 </template>
 
@@ -25,27 +33,121 @@
 	export default {
 		data() {
 			return {
+				showLoading:true,// 是否显示加载动画
 				activeIndex: 0,
-				cate: []
+				cate: [],
+				list: [],
+				leftDomsTop: [],
+				rightDomsTop: [],
+				rightScrollTop: 0,
+				leftScrollTop: 0,
+				cateItemHeight: 0
+			}
+		},
+		watch: {
+			async activeIndex(newValue, oldValue) {
+				// 获取scroll-view高度，scrollTop
+				let data = await this.getElInfo({
+					size: true,
+					scrollOffset: true
+				})
+				let H = data.height
+				let ST = data.scrollTop
+				// 下边
+				if ((this.leftDomsTop[newValue] + this.cateItemHeight) > (H + ST)) {
+					return this.leftScrollTop = this.leftDomsTop[newValue] + this.cateItemHeight - H
+				}
+				// 上边
+				if (ST > this.cateItemHeight) {
+					this.leftScrollTop = this.leftDomsTop[newValue]
+				}
 			}
 		},
 		onLoad() {
-			for (let i = 0; i < 20; i++) {
-				this.cate.push({
-					name: '分类' + i
+			this.getData()
+		},
+		onReady() {
+			// 左边
+			this.getElInfo({
+				all: 'left',
+				size: true,
+				rect: true
+			}).then(data => {
+				this.leftDomsTop = data.map(v => {
+					this.cateItemHeight = v.height
+					return v.top
 				})
-			}
+			})
+
+			// 右边边
+			this.getElInfo({
+				all: 'right',
+				size: false,
+				rect: true
+			}).then(data => {
+				this.rightDomsTop = data.map(v => v.top)
+			})
+
 		},
 		methods: {
+			// 获取节点信息
+			getElInfo(obj = {}) {
+				return new Promise((res, rej) => {
+					let option = {
+						size: obj.size ? true : false,
+						rect: obj.rect ? true : false,
+						scrollOffset: obj.scrollOffset ? true : false,
+					}
+					const query = uni.createSelectorQuery().in(this);
+					let q = obj.all ? query.selectAll(`.${obj.all}-scroll-item`) : query.select('#leftScroll')
+					q.fields(option, data => {
+						res(data)
+					}).exec();
+				})
+			},
+			getData() {
+				for (let i = 0; i < 20; i++) {
+					this.cate.push({
+						name: '分类' + i
+					})
+					this.list.push({
+						name: `—— 产品分类${i} ——`,
+						list: []
+					})
+				}
+				for (let i = 0; i < this.list.length; i++) {
+					for (let j = 0; j < 24; j++) {
+						this.list[i].list.push({
+							src: '/static/images/demo/demomi.png',
+							name: `分类${i}-商品${j}`
+						})
+					}
+				}
+				this.showLoading = false
+			},
 			// 点击搜索按钮跳转至搜索页
 			goSearch() {
 				uni.navigateTo({
 					url: '../search/search'
 				})
 			},
+			// 点击左边导航栏
 			changeCate(index) {
 				this.activeIndex = index
-			}
+				// 右边scroll-view滚动到对应区块
+				this.rightScrollTop = this.rightDomsTop[index]
+				console.log(this.rightScrollTop)
+			},
+			// 监听右边滚动事件
+			async onRightScroll(e) {
+				// 匹配当前scrollTop所处的索引
+				this.rightDomsTop.forEach((v, k) => {
+					if (v < e.detail.scrollTop + 3) {
+						this.activeIndex = k
+						return false
+					}
+				})
+			},
 		}
 	}
 </script>
@@ -54,10 +156,12 @@
 	.class-active {
 		font-size: 40upx;
 		color: #FF6700 !important;
-		transition: all .2s linear;
+		transition: all .15s linear;
 	}
-	.class-no-active{
-		    transition: all .2s linear;
-		    transform-origin: center center;
-			}
+
+	.class-no-active {
+		transition: all .15s linear;
+		transform-origin: center center;
+		line-height: 60upx;
+	}
 </style>

@@ -15,6 +15,7 @@
 					<view v-if="title.length" class="uni-navbar__header-container-inner uni-navbar__content_view">{{ title }}</view>
 					<!-- 标题插槽 -->
 					<slot />
+					
 				</view>
 				<view class="uni-navbar__header-btns uni-navbar__content_view" @tap="onClickRight">
 					<view v-if="rightIcon.length" class="uni-navbar__content_view">

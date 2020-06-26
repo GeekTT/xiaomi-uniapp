@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<!-- 顶部搜索栏 -->
-		<view class="w-95 position-fixed top-0 z-9 d-flex a-center j-around bg-white px-2 pt-1 pb-0">
+		<view class="w-95 position-fixed top-0 z-9 d-flex a-center j-around bg-white px-2 pt-1 pb-2">
 			<i class="iconfont icon-fanhui4 i-font-size"></i>
 			<search-top class="flex-1 mx-2" :searchIconShow="false" :paddingLeft="false" :placeholder="placeholder" @onSearch="onSearch"
 			 :disabled="true"></search-top>

@@ -1,1 +1,1 @@
-<view class="container"><view class="iconfont icon-tubiao- find _i"></view><input class="bar" placeholder="{{placeholder}}"/></view>
+<view class="container"><view class="{{['iconfont  find _i',(searchIconShow)?'icon-tubiao-':'']}}"></view><input class="{{['bar',(paddingLeft)?'bar-pl60':'',(!paddingLeft)?'bar-pl30':'']}}" placeholder="{{placeholder}}" data-event-opts="{{[['confirm',[['$emit',['onSearch']]]]]}}" bindconfirm="__e"/></view>

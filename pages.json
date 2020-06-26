@@ -1,37 +1,71 @@
 {
 	"pages": [{
 		"path": "pages/index/index",
+		"style": {}
+	}, {
+		"path": "pages/class/class",
 		"style": {
+			"navigationStyle": "default",
+			"app-plus": {
+				"scrollIndicator": "none",
+				"bounce": "none",
+				"titleNView": {
+					"searchInput": {
+						"align": "left",
+						"backgroundColor": "#F7F7F7",
+						"borderRadius": "4px",
+						"disabled": true,
+						"placeholder": "小米10pro",
+						"placeholderColor": "#CCCCCC"
+					},
+					"buttons": [{
+						"color": "#989898",
+						"colorPressed": "#FD6801",
+						"float": "right",
+						"fontSize": "22px",
+						"fontSrc": "/static/font/iconfont.ttf",
+						"text": "\ue67a"
+					}]
+				}
+			}
 		}
-	}    ,{
-            "path" : "pages/class/class",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/cart/cart",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/my/my",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/search/search",
-            "style": {
-            			
-                        }
-        }
-        ,{
-            "path" : "pages/search-list/search-list",
-            "style" : {}
-        }
-    ],
+	}, {
+		"path": "pages/cart/cart",
+		"style": {}
+	}, {
+		"path": "pages/my/my",
+		"style": {}
+	}, {
+		"path": "pages/search/search",
+		"style": {
+
+		}
+	}, {
+		"path": "pages/search-list/search-list",
+		"style": {}
+	}, {
+		"path": "pages/datail/datail",
+		 "style" : {
+						"app-plus":{
+							"scrollIndicator":"none",
+							"bounce":"none",
+							"titleNView":{
+								"type":"transparent",
+								"buttons":[
+									{
+										"type":"share"
+									}
+								]
+							}
+						}
+					}
+	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "仿小米商城",
 		"navigationBarBackgroundColor": "#fff",
 		"backgroundColor": "#fff",
-		"navigationStyle":"custom"
+		"navigationStyle": "custom"
 	},
 	"tabBar": {
 		"color": "#B5B5B5",

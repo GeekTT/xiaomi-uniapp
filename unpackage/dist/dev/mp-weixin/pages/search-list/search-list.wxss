@@ -1,0 +1,6 @@
+
+.i-font-size {
+	font-size: 50rpx;
+	color: #8a8a8a;
+}
+

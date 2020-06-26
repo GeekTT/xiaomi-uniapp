@@ -15,8 +15,15 @@ _vue.default.config.productionTip = false;
 _App.default.mpType = 'app';
 
 // 引入全局组件
-var divider = function divider() {__webpack_require__.e(/*! require.ensure | components/common/divider */ "components/common/divider").then((function () {return resolve(__webpack_require__(/*! @/components/common/divider.vue */ 43));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+var divider = function divider() {__webpack_require__.e(/*! require.ensure | components/common/divider */ "components/common/divider").then((function () {return resolve(__webpack_require__(/*! @/components/common/divider.vue */ 55));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 _vue.default.component('divider', divider);
+
+// 引入全局加载动画
+var loading = function loading() {__webpack_require__.e(/*! require.ensure | components/common/loading */ "components/common/loading").then((function () {return resolve(__webpack_require__(/*! @/components/common/loading.vue */ 164));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+_vue.default.component('loading', loading);var loadingPlus = function loadingPlus() {__webpack_require__.e(/*! require.ensure | common/mixin/loading-plus */ "common/mixin/loading-plus").then((function () {return resolve(__webpack_require__(/*! @/common/mixin/loading-plus.vue */ 172));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+
+
+_vue.default.component('loading-plus', loadingPlus);
 var app = new _vue.default(_objectSpread({},
 _App.default));
 

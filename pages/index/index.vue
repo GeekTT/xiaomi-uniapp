@@ -1,5 +1,6 @@
 <template>
 	<view>
+		  <view class="status_bar"></view>
 		<view class="w-100 ">
 			<!-- 顶部搜索框 -->
 			<navigator url="../search/search">
@@ -35,10 +36,6 @@
 							<three-adv :resdata="list.data"></three-adv>
 							<!-- <divider></divider> -->
 						</template>
-
-						<!-- <card :showhead="false">
-							<image src="../../static/images/bg.jpg" mode="widthFix"></image>
-						</card> -->
 						<!-- 公共列表组件 -->
 						<view class="row j-sb">
 							<block v-if="list.type === 'commonList'" v-for="(item2,index2) in list.data" :key="index2">
@@ -393,6 +390,7 @@ let demo2 = [
 				
 				
 			},
+			
 			
 			
 		},

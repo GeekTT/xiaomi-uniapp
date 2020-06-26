@@ -1,0 +1,15 @@
+
+.class-active {
+	font-size: 40rpx;
+	color: #FF6700 !important;
+	-webkit-transition: all .15s linear;
+	transition: all .15s linear;
+}
+.class-no-active {
+	-webkit-transition: all .15s linear;
+	transition: all .15s linear;
+	-webkit-transform-origin: center center;
+	        transform-origin: center center;
+	line-height: 60rpx;
+}
+

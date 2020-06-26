@@ -4,7 +4,9 @@
     "pages/class/class",
     "pages/cart/cart",
     "pages/my/my",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/search-list/search-list",
+    "pages/datail/datail"
   ],
   "subPackages": [],
   "window": {
@@ -47,6 +49,8 @@
     ]
   },
   "usingComponents": {
-    "divider": "/components/common/divider"
+    "divider": "/components/common/divider",
+    "loading": "/components/common/loading",
+    "loading-plus": "/common/mixin/loading-plus"
   }
 }

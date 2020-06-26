@@ -29,9 +29,14 @@
 			}
 		},
 		methods: {
-			openDetail() {
-				uni[this.type]({
-					url:"/pages/detail/detail?detail="+JSON.stringify(this.item)
+			// openDetail() {
+			// 	uni[this.type]({
+			// 		url:"/pages/detail/detail?detail="+JSON.stringify(this.item)
+			// 	})
+			// }
+			openDetail(){
+				uni.navigateTo({
+					url:'../../pages/datail/datail'
 				})
 			}
 		},

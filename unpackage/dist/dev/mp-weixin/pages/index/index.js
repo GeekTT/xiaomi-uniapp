@@ -193,11 +193,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 // 模拟后端数据
 var demotabBars = [{
@@ -416,7 +411,7 @@ var demo2 = [
     title: '小米10',
     desc: '骁龙865/1亿像素相机',
     oprice: '3999',
-    pprice: '3799' }] }];var searchTop = function searchTop() {__webpack_require__.e(/*! require.ensure | components/common/search */ "components/common/search").then((function () {return resolve(__webpack_require__(/*! ../../components/common/search.vue */ 50));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var swiperImage = function swiperImage() {__webpack_require__.e(/*! require.ensure | components/index/swiper-image */ "components/index/swiper-image").then((function () {return resolve(__webpack_require__(/*! ../../components/index/swiper-image.vue */ 57));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var indexNav = function indexNav() {__webpack_require__.e(/*! require.ensure | components/index/index-nav */ "components/index/index-nav").then((function () {return resolve(__webpack_require__(/*! ../../components/index/index-nav.vue */ 62));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var threeAdv = function threeAdv() {__webpack_require__.e(/*! require.ensure | components/index/three-adv */ "components/index/three-adv").then((function () {return resolve(__webpack_require__(/*! ../../components/index/three-adv.vue */ 67));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var card = function card() {__webpack_require__.e(/*! require.ensure | components/common/card */ "components/common/card").then((function () {return resolve(__webpack_require__(/*! ../../components/common/card.vue */ 72));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var commonList = function commonList() {__webpack_require__.e(/*! require.ensure | components/common/common-list */ "components/common/common-list").then((function () {return resolve(__webpack_require__(/*! ../../components/common/common-list.vue */ 77));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+    pprice: '3799' }] }];var searchTop = function searchTop() {__webpack_require__.e(/*! require.ensure | components/common/search */ "components/common/search").then((function () {return resolve(__webpack_require__(/*! ../../components/common/search.vue */ 62));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var swiperImage = function swiperImage() {__webpack_require__.e(/*! require.ensure | components/index/swiper-image */ "components/index/swiper-image").then((function () {return resolve(__webpack_require__(/*! ../../components/index/swiper-image.vue */ 69));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var indexNav = function indexNav() {__webpack_require__.e(/*! require.ensure | components/index/index-nav */ "components/index/index-nav").then((function () {return resolve(__webpack_require__(/*! ../../components/index/index-nav.vue */ 74));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var threeAdv = function threeAdv() {__webpack_require__.e(/*! require.ensure | components/index/three-adv */ "components/index/three-adv").then((function () {return resolve(__webpack_require__(/*! ../../components/index/three-adv.vue */ 79));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var card = function card() {__webpack_require__.e(/*! require.ensure | components/common/card */ "components/common/card").then((function () {return resolve(__webpack_require__(/*! ../../components/common/card.vue */ 84));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var commonList = function commonList() {__webpack_require__.e(/*! require.ensure | components/common/common-list */ "components/common/common-list").then((function () {return resolve(__webpack_require__(/*! ../../components/common/common-list.vue */ 89));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -442,6 +437,7 @@ var demo2 = [
 
   data: function data() {
     return {
+
       placeholder: '小米10pro',
       scrollinto: '',
       scrollH: 700, // 默认屏幕高度
@@ -531,6 +527,7 @@ var demo2 = [
 
 
     } },
+
 
 
 

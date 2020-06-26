@@ -34,4 +34,9 @@ image{  width: 100%;  }
 .border-bottom-active-color{
 	border-bottom: 3px #FF6700 solid;
 }
+/* 非H5页面让出前景部分 */
+ .status_bar {
+      height: var(--status-bar-height);
+      width: 100%;
+  }
 
