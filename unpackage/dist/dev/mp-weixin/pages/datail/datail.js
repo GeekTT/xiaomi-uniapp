@@ -128,7 +128,65 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var swiperImage = function swiperImage() {__webpack_require__.e(/*! require.ensure | components/index/swiper-image */ "components/index/swiper-image").then((function () {return resolve(__webpack_require__(/*! ../../components/index/swiper-image.vue */ 69));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var swiperImage = function swiperImage() {__webpack_require__.e(/*! require.ensure | components/index/swiper-image */ "components/index/swiper-image").then((function () {return resolve(__webpack_require__(/*! @/components/index/swiper-image.vue */ 69));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var baseInfo = function baseInfo() {__webpack_require__.e(/*! require.ensure | components/detail/base-info */ "components/detail/base-info").then((function () {return resolve(__webpack_require__(/*! @/components/detail/base-info.vue */ 183));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var scrollAttrs = function scrollAttrs() {__webpack_require__.e(/*! require.ensure | components/detail/scroll-attrs */ "components/detail/scroll-attrs").then((function () {return resolve(__webpack_require__(/*! ../../components/detail/scroll-attrs.vue */ 188));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniListItem = function uniListItem() {__webpack_require__.e(/*! require.ensure | components/uni-ui/uni-list-item/uni-list-item */ "components/uni-ui/uni-list-item/uni-list-item").then((function () {return resolve(__webpack_require__(/*! @/components/uni-ui/uni-list-item/uni-list-item.vue */ 99));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -138,7 +196,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 {
   components: {
-    swiperImage: swiperImage },
+    swiperImage: swiperImage,
+    baseInfo: baseInfo,
+    scrollAttrs: scrollAttrs,
+    uniListItem: uniListItem },
 
   data: function data() {
     return {
@@ -153,8 +214,46 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         src: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/121e370dc1d5ccf75673eb9ac7a575a3.jpg' },
 
       {
-        src: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6678e97a159fff2e90b31573059188e7.jpg' }] };
+        src: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6678e97a159fff2e90b31573059188e7.jpg' }],
 
+
+
+      detail: {
+        title: "小米10 ",
+        desc: '骁龙865旗舰平台，双模5G，用久了也不卡 / 1亿像素8K电影相机 / 6.67英寸 AMOLED双曲面屏',
+        pprice: 3799,
+        oprice: 3999 },
+
+      baseAttrs: [
+      {
+        icon: 'icon-cpu',
+        cpu: 'CPU',
+        desc: '骁龙865' },
+
+      {
+        icon: 'icon-cpu',
+        cpu: 'CPU',
+        desc: '骁龙865' },
+
+      {
+        icon: 'icon-cpu',
+        cpu: 'CPU',
+        desc: '骁龙865' },
+
+      {
+        icon: 'icon-cpu',
+        cpu: 'CPU',
+        desc: '骁龙865' },
+
+      {
+        icon: 'icon-cpu',
+        cpu: 'CPU',
+        desc: '骁龙865' },
+
+      {
+        icon: 'icon-cpu',
+        cpu: 'CPU',
+        desc: '骁龙865' }] };
 
 
 
