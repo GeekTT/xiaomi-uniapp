@@ -36,7 +36,7 @@
 			// }
 			openDetail(){
 				uni.navigateTo({
-					url:'../../pages/datail/datail'
+					url:'../../pages/detail/detail'
 				})
 			}
 		},

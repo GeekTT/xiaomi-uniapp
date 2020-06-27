@@ -9,14 +9,14 @@
 		
 		<loading :show="showLoading"></loading>
 		
-		<scroll-view id="leftScroll" class="flex-1 py-3 border-right" scroll-y style="height: 100%;" :scroll-top="leftScrollTop"
+		<scroll-view id="leftScroll" class="flex-1 border-right" scroll-y style="height: 100%;" :scroll-top="leftScrollTop"
 		 >
 			<view class="border-light-secondary py-1 left-scroll-item" hover-class="bg-ligth-secondary" v-for="(item,index) in cate"
 			 :key="index" @tap="changeCate(index)">
 				<view class=" py-1 font-md text-muted text-center class-no-active" :class="activeIndex === index ? 'class-active':'' ">{{item.name}}</view>
 			</view>
 		</scroll-view>
-		<scroll-view scroll-y class="flex-3 py-3" style="height: 100%;" :scroll-top="rightScrollTop" :scroll-with-animation="true"
+		<scroll-view scroll-y class="flex-3" style="height: 100%;" :scroll-top="rightScrollTop" :scroll-with-animation="true"
 		 @scroll="onRightScroll">
 			<view class="row right-scroll-item" v-for="(item,index) in list" :key="index">
 				<view class="w-100 text-center text-muted font-md">{{item.name}}</view>

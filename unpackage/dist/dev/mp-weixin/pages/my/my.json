@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "loading": "/common/mixin/loading",
+    "card": "/components/common/card",
+    "uni-list-item": "/components/uni-ui/uni-list-item/uni-list-item"
+  }
 }

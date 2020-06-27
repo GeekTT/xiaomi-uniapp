@@ -8,7 +8,7 @@
 
 <template>
 <!--基础元素-->
-<div class="wxParse" :class="className" v-if="!loading">
+<div class="wxParse son-style" :class="className" v-if="!loading">
   <block v-for="(node,index) of nodes" :key="index">
     <wxParseTemplate :node="node" />
   </block>

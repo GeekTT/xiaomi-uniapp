@@ -19,7 +19,7 @@
 				<slot name="right">
 				<uni-badge v-if="showBadge" :type="badgeType" :text="badgeText" />
 				<switch v-if="showSwitch" :disabled="disabled" :checked="switchChecked" @change="onSwitchChange" />
-				<uni-icon class="uni-icon-wrapper" v-if="showArrow && showArrowIcon" :size="20" color="#bbb" type="arrowright" />
+				<i class="iconfont icon-icon-right-wrarow font-lg text-light-muted" v-if="showArrow && showArrowIcon"></i>
 				</slot>
 			</view>
 		</view>

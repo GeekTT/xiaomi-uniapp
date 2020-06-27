@@ -1,0 +1,11 @@
+
+.uparse ._p {
+	padding: 0 !important;
+}
+.uparse view,
+.uparse uni-view {
+	margin: 0;
+	padding: 0 !important;
+	line-height: 0 !important;
+}
+

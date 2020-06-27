@@ -6,7 +6,7 @@
     "pages/my/my",
     "pages/search/search",
     "pages/search-list/search-list",
-    "pages/datail/datail"
+    "pages/detail/detail"
   ],
   "subPackages": [],
   "window": {
@@ -17,7 +17,7 @@
     "navigationStyle": "custom"
   },
   "tabBar": {
-    "color": "#B5B5B5",
+    "color": "#747474",
     "selectedColor": "#ff6700",
     "borderStyle": "black",
     "backgroundColor": "#FFFFFF",

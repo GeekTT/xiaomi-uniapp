@@ -31,10 +31,22 @@
 		}
 	}, {
 		"path": "pages/cart/cart",
-		"style": {}
+		"style": {
+			"enablePullDownRefresh": false,
+			"app-plus": {
+				"titleNView": false,
+				"scrollIndicator": "none",
+				"bounce": "none"
+			}
+		}
 	}, {
 		"path": "pages/my/my",
-		"style": {}
+		"style": {
+			"app-plus": {
+				"titleNView": false,
+				"bounce": "none"
+			}
+		}
 	}, {
 		"path": "pages/search/search",
 		"style": {
@@ -44,21 +56,19 @@
 		"path": "pages/search-list/search-list",
 		"style": {}
 	}, {
-		"path": "pages/datail/datail",
-		 "style" : {
-						"app-plus":{
-							"scrollIndicator":"none",
-							"bounce":"none",
-							"titleNView":{
-								"type":"transparent",
-								"buttons":[
-									{
-										"type":"share"
-									}
-								]
-							}
-						}
-					}
+		"path": "pages/detail/detail",
+		"style": {
+			"app-plus": {
+				"scrollIndicator": "none",
+				"bounce": "none",
+				"titleNView": {
+					"type": "transparent",
+					"buttons": [{
+						"type": "share"
+					}]
+				}
+			}
+		}
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
@@ -68,7 +78,7 @@
 		"navigationStyle": "custom"
 	},
 	"tabBar": {
-		"color": "#B5B5B5",
+		"color": "#747474",
 		"selectedColor": "#ff6700",
 		"borderStyle": "black",
 		"backgroundColor": "#FFFFFF",

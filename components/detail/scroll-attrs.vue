@@ -1,12 +1,12 @@
 <template>
-	<scroll-view scroll-x class="scroll-row">
+	<scroll-view scroll-x class="scroll-row border-top">
 		<view class="scroll-row-item"
 		style="width: 170upx;height: 110upx;"
 		v-for="(item,index) in baseAttrs" :key="index">
 			<view class="d-flex flex-column a-center j-center">
 				<view class="iconfont line-h-sm"
 				:class="item.icon"></view>
-				<view class="line-h-sm">{{item.title}}</view>
+				<view class="line-h-sm">{{item.cpu}}</view>
 				<view class="text-light-muted font-sm line-h-sm">
 					{{item.desc}}
 				</view>
