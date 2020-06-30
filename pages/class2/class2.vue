@@ -1,24 +1,13 @@
 <template>
-	<view class="d-flex" style="height: 100%;">
-		<!-- 顶部 -->
-		<!-- <view class="w-95 position-fixed top-0 z-9 d-flex a-center j-around bg-light-1 px-2 pt-1 pb-0">
-			<i class="iconfont icon-fanhui4 i-font-size"></i>
-			<view class="flex-1 font-md-1 text-light-muted text-center">分类</view>
-			<i class="iconfont icon-sousuo1 text-light-muted i-font-size m-0 " @click="goSearch"></i>
-		</view> -->
-		
-		<loading :show="showLoading"></loading>
-		
-		<scroll-view id="leftScroll" class="flex-1 border-right border-light-secondary" scroll-y style="height: 100%;" :scroll-top="leftScrollTop"
-		 >
-			<view class=" py-1 left-scroll-item" hover-class="bg-ligth-secondary" v-for="(item,index) in cate"
-			 :key="index" @tap="changeCate(index)">
+	<view class="d-flex h-100" >
+		<scroll-view id="leftScroll" class="left-scroll flex-1 border-right " scroll-y>
+			<view class="left-scroll-item py-1" v-for="(item,index) in cate" :key="index" @tap="changeCate(index)">
 				<view class=" py-1 font-md text-muted text-center class-no-active" :class="activeIndex === index ? 'class-active':'' ">{{item.name}}</view>
+				
 			</view>
 		</scroll-view>
-		
-		<scroll-view scroll-y class="flex-3" style="height: 100%;" :scroll-top="rightScrollTop" scroll-with-animation="true"
-		 @scroll="onRightScroll">
+		<scroll-view scroll-y class="right-scroll flex-3" :scroll-top="rightScrollTop" scroll-with-animation
+		@scroll="onRightScroll">
 			<view class="row right-scroll-item" v-for="(item,index) in list" :key="index">
 				<view class="w-100 text-center text-muted font-md">{{item.name}}</view>
 				<view class="span24-8 text-center py-2" v-for="(item2 ,index2) in item.list" :key="index2">
@@ -79,7 +68,7 @@
 					return v.top
 				})
 			})
-
+	
 			// 右边边
 			this.getElInfo({
 				all: 'right',
@@ -88,7 +77,7 @@
 			}).then(data => {
 				this.rightDomsTop = data.map(v => v.top)
 			})
-
+	
 		},
 		methods: {
 			// 获取节点信息
@@ -154,7 +143,7 @@
 </script>
 
 <style>
-	.class-active {
+.class-active {
 		font-size: 40upx;
 		color: #FF6700 !important;
 		transition: all .15s linear;

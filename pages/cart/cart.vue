@@ -69,6 +69,10 @@
 				
 			}
 		},
+		
+		onLoad(){
+			console.log(JSON.stringify(this.$store.state.list))
+		},
 		methods: {
 			
 		}

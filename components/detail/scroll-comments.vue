@@ -1,6 +1,12 @@
 <template>
 	<view class="p-2">
-		<card headTitle="用户评价" :headTitleWeight="true" :headBorderBottom="false"/>
+		<navigator url="../../pages/detail-comment/detail-comment">
+		<view class="d-flex a-center j-sb w-100">
+			<text class="font-md-1 font-weight">用户评价</text>
+			<view class="text-secondary font ml-auto">
+				好评率99.9%<text class="iconfont icon-you font mx-2 text-light-muted"></text>
+			</view>
+		</view></navigator>
 		<scroll-view scroll-x class="scroll-row">
 			<view class="scroll-row-item rounded-1 mr-2 p-2 border" style="width: 620rpx;height: 380rpx;"
 			v-for="(item,index) in comments" :key="index">
@@ -22,10 +28,11 @@
 			</view>
 			
 		</scroll-view>
+		<navigator url="../../pages/detail-comment/detail-comment">
 		<view class="w-100 d-flex j-center a-center mt-2 py-2  border-bottom text-light-muted font-md" hover-class="bg-light-secondary">
 			<text class="">查看全部</text>
 			<view class="iconfont icon-you font ml-1"></view>
-		</view>
+		</view></navigator>
 	</view>
 </template>
 

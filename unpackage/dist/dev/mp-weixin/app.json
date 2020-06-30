@@ -52,5 +52,6 @@
     "divider": "/components/common/divider",
     "loading": "/components/common/loading",
     "loading-plus": "/common/mixin/loading-plus"
-  }
+  },
+  "sitemapLocation": "sitemap94.json"
 }

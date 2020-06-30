@@ -69,7 +69,39 @@
 				}
 			}
 		}
-	}],
+	}    ,{
+            "path" : "pages/class2/class2",
+            "style": {
+            	"navigationStyle": "default",
+            	"app-plus": {
+            		"scrollIndicator": "none",
+            		"bounce": "none",
+            		"titleNView": {
+            			"searchInput": {
+            				"align": "left",
+            				"backgroundColor": "#F7F7F7",
+            				"borderRadius": "4px",
+            				"disabled": true,
+            				"placeholder": "小米10pro",
+            				"placeholderColor": "#CCCCCC"
+            			},
+            			"buttons": [{
+            				"color": "#989898",
+            				"colorPressed": "#FD6801",
+            				"float": "right",
+            				"fontSize": "22px",
+            				"fontSrc": "/static/font/iconfont.ttf",
+            				"text": "\ue67a"
+            			}]
+            		}
+            	}
+            }
+        }
+        ,{
+            "path" : "pages/detail-comment/detail-comment",
+            "style" : {}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "仿小米商城",
